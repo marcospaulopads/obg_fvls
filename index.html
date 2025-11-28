@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acesse o Grupo VIP</title>
+  <link rel="preload" as="image" href="https://i.postimg.cc/MTbXLJsH/TELEGRAM.png">
+
+  <!-- UTMify Script -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+
+  <!-- TikTok Pixel Code -->
+  <script>
+    window.tikTokPixelId = "691e8d8791b6d5ba7830ea41";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-tiktok.js");
+    document.head.appendChild(a);
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 16px;
+    }
+
+    .container {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.1);
+      padding: 32px 28px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      animation: slideIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo {
+      margin-bottom: 28px;
+      animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+      position: relative;
+    }
+
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .logo::after {
+      content: "";
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      width: 60px;
+      height: 60px;
+      background: #FFD700;
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: float 3s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .logo img {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+      border-radius: 16px;
+      filter: drop-shadow(0 10px 25px rgba(0, 136, 204, 0.2));
+      transition: transform 0.3s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      color: #0088CC;
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 28px;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    .verification-subtle {
+      color: #666;
+      font-size: 0.85rem;
+      margin-top: 14px;
+      font-weight: 600;
+      opacity: 0.95;
+      text-align: center;
+    }
+
+    .btn-access {
+      width: 100%;
+      padding: 18px 24px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0088CC 0%, #0070A8 100%);
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 10px 30px rgba(0, 136, 204, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-access::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .btn-access:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .btn-access:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0, 136, 204, 0.4);
+    }
+
+    .btn-access:active {
+      transform: translateY(-1px);
+    }
+
+    .btn-access:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    .loading {
+      display: none;
+      margin-top: 18px;
+    }
+
+    .spinner {
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #0088CC;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .loading-text {
+      color: #0088CC;
+      font-size: 0.9rem;
+      margin-top: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .footer {
+      margin-top: 24px;
+      color: #bbb;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 24px 20px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .subtitle {
+        font-size: 0.95rem;
+      }
+
+      .logo img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .btn-access {
+        padding: 16px 20px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://i.postimg.cc/MTbXLJsH/TELEGRAM.png" alt="Grupo VIP">
+    </div>
+
+    <h1>VOCÊ TÁ DENTRO! 🇧🇷🔥</h1>
+    <p class="subtitle">Agora é só entrar no nosso grupo VIP e garantir seu acesso exclusivo.</p>
+
+    <button class="btn-access" id="accessBtn">ACESSAR GRUPO VIP →</button>
+
+    <div class="verification-subtle">ACESSO 100% VERIFICADO</div>
+
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <div class="loading-text">Processando...</div>
+    </div>
+
+    <div class="footer">
+      Você será redirecionado para o Telegram em instantes
+    </div>
+  </div>
+
+  <script>
+    // Captura parâmetros da URL
+    function getCampaignParams() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return {
+        utm_source: urlParams.get('utm_source') || 'direto',
+        utm_campaign: urlParams.get('utm_campaign') || 'sem_campanha',
+        utm_medium: urlParams.get('utm_medium') || 'sem_origem',
+        utm_content: urlParams.get('utm_content') || 'sem_conteudo',
+        utm_term: urlParams.get('utm_term') || 'sem_termo',
+        ttclid: urlParams.get('ttclid') || ''
+      };
+    }
+
+    // Gera Transaction ID único
+    function generateTransactionId() {
+      return 'VIP-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+    }
+
+    // Armazena informações no localStorage
+    const campaignData = getCampaignParams();
+    const transactionId = generateTransactionId();
+    localStorage.setItem('campaignData', JSON.stringify(campaignData));
+    localStorage.setItem('transactionId', transactionId);
+
+    // Dispara evento ViewContent do TikTok Pixel
+    async function trackAccessEvent() {
+      // Helper: espera até que o global ttq esteja disponível ou timeout
+      function waitForTTQ(timeout = 5000, interval = 150) {
+        return new Promise((resolve) => {
+          const start = Date.now();
+          (function check() {
+            if (window.ttq && (typeof window.ttq.track === 'function' || Array.isArray(window.ttq))) return resolve(true);
+            if (Date.now() - start > timeout) return resolve(false);
+            setTimeout(check, interval);
+          })();
+        });
+      }
+
+      try {
+        // Tenta aguardar o carregamento do pixel por alguns instantes
+        const ttqReady = await waitForTTQ(5000);
+
+        // Busca dados de geolocalização (fazemos mesmo que o pixel não esteja pronto)
+        const geoResponse = await fetch("https://ipapi.co/json/");
+        const geoData = await geoResponse.json();
+
+        const eventData = {
+          content_name: 'Acesso Grupo VIP',
+          content_type: 'group',
+          content_id: 'grupo_vip_telegram',
+          client_user_agent: navigator.userAgent,
+          city: geoData.city,
+          region: geoData.region,
+          country: geoData.country,
+          timezone: geoData.timezone,
+          isp: geoData.org,
+          ip: geoData.ip,
+          utm_source: campaignData.utm_source,
+          utm_campaign: campaignData.utm_campaign,
+          utm_medium: campaignData.utm_medium,
+          utm_content: campaignData.utm_content,
+          utm_term: campaignData.utm_term,
+          ttclid: campaignData.ttclid,
+          transaction_id: transactionId
+        };
+
+        console.log('📊 Dados do evento ViewContent:', eventData);
+
+        if (ttqReady && window.ttq && typeof window.ttq.track === 'function') {
+          // Pixel pronto: dispara diretamente
+          try {
+            window.ttq.track('ViewContent', eventData);
+            console.log('✅ Evento ViewContent disparado com sucesso!');
+          } catch (e) {
+            console.warn('⚠️ Falha ao chamar ttq.track, enfileirando evento:', e);
+            // fallback: enfileira no formato usado por algumas libs
+            window.ttq.push && window.ttq.push(['track', 'ViewContent', eventData]);
+          }
+        } else {
+          // Pixel não pronto: tenta enfileirar o evento para quando a lib inicializar
+          if (!window.ttq) window.ttq = [];
+          if (Array.isArray(window.ttq)) {
+            window.ttq.push(['track', 'ViewContent', eventData]);
+            console.log('ℹ️ Pixel não pronto — evento enfileirado para quando carregar.');
+          } else {
+            console.warn('⚠️ Pixel não disponível e não foi possível enfileirar.');
+          }
+        }
+
+        return true;
+      } catch (error) {
+        console.error('❌ Erro ao rastrear evento:', error);
+        return true; // Continua mesmo com erro
+      }
+    }
+
+    // Event listener do botão
+    document.getElementById('accessBtn').addEventListener('click', async function() {
+      const btn = this;
+      const loading = document.getElementById('loading');
+
+      // Desabilita o botão
+      btn.disabled = true;
+      btn.style.opacity = '0.6';
+
+      // Mostra loading
+      loading.style.display = 'block';
+      btn.style.display = 'none';
+
+      // Dispara evento ViewContent
+      await trackAccessEvent();
+
+      // Aguarda 2 segundos e redireciona
+      setTimeout(() => {
+        window.location.href = 'https://t.me/+aSIF69c3BEQ1ZjRh';
+      }, 2000);
+    });
+
+    // Log de informações para debug
+    console.log('📱 Informações da Campanha:', campaignData);
+    console.log('🔑 Transaction ID:', transactionId);
+    console.log('🌐 URL completa:', window.location.href);
+  </script>
+</body>
+
+</html>
